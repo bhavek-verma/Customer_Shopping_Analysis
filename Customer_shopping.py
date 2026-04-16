@@ -33,7 +33,7 @@ print(df)
 # Create age_group Column
 labels = ['Young Adult', 'Adult', 'Middle Age', 'Senior']
 df["age_group"] = pd.qcut(df["age"], q=4, labels=labels)
-df["age_group"] = df["age_group"].astype(str)  # required for MySQL
+df["age_group"] = df["age_group"].astype(str) 
 
 print(df[["age", "age_group"]].head(10))
 
